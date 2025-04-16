@@ -68,7 +68,6 @@ app.get('/users', async (req, res) => {
     const users = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     res.json(users);
   } catch (err) {
-    console.log(err);
     res.status(500).send('Error fetching users');
   }
 });

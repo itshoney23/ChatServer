@@ -3,7 +3,7 @@ const http = require('http');
 const socketIo = require('socket.io');
 const admin = require('firebase-admin');
 const cors = require('cors');
-const serviceAccount = require('./buzz-chat-b7cc8-firebase-adminsdk-fbsvc-78fa068b49.json'); // path to your Firebase Admin SDK JSON
+const serviceAccount = require('/etc/secrets/buzz-chat-b7cc8-firebase-adminsdk-fbsvc-78fa068b49.json'); // path to your Firebase Admin SDK JSON
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
